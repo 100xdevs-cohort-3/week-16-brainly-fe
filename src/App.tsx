@@ -9,26 +9,26 @@ function App() {
     <>
       <Button 
         variant={"primary"}
-        startIcon={<PlusIcon size={"lg"} />} 
-        endIcon={<ShareIcon size={"lg"} />} 
-        size="lg" 
+        startIcon={<PlusIcon />} 
+        endIcon={<ShareIcon />} 
+        size="sm" 
         title={"Share"}
       ></Button>
 
 <Button 
         variant={"secondary"}
-        startIcon={<PlusIcon size={"lg"} />} 
-        endIcon={<ShareIcon size={"lg"} />} 
-        size="lg" 
+        startIcon={<PlusIcon />} 
+        endIcon={<ShareIcon  />} 
+        size="md" 
         title={"Share"}
       ></Button>
 
 
       <Button 
         variant={"primary"}
-        startIcon={<PlusIcon size={"sm"} />} 
-        endIcon={<ShareIcon size={"sm"} />} 
-        size="sm" 
+        startIcon={<PlusIcon/>} 
+        endIcon={<ShareIcon />} 
+        size="lg" 
         title={"Share"}
       ></Button>
     </>

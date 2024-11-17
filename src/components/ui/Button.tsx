@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 
 interface ButtonInterface {
     title: string;
@@ -19,15 +19,17 @@ const variantStyles = {
     "secondary": "bg-purple-400 text-purple-600",
 }
 
-export function Button(props: ButtonInterface) {
+export function Button({startIcon, size, endIcon, title, variant}: ButtonInterface) {
+    const StartIconWithProps = startIcon ? React.cloneElement(startIcon, { size }) : null;
+    const EndIconWithProps = endIcon ? React.cloneElement(endIcon, { size }) : null;
 
-    return <button className={sizeStyles[props.size] + " " + variantStyles[props.variant]}>
-        <div className="flex">
-            {props.startIcon}
+    return <button className={sizeStyles[size] + " " + variantStyles[variant]}>
+        <div className="flex items-center">
+            {StartIconWithProps}
             <div className="pl-2 pr-2">
-                {props.title}
+                {title}
             </div>
-            {props.endIcon}
+            {EndIconWithProps}
         </div>
     </button>
 }
